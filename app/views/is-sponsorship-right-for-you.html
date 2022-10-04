@@ -58,6 +58,8 @@
 
      
       <br/>
+      
+      {#
       {% from "govuk/components/radios/macro.njk" import govukRadios %}
 
 {{ govukRadios({
@@ -81,6 +83,7 @@
     }
   ]
 }) }}
+#}
 
       <form class="form" action="do-you-know-who-you-want-to-sponsor">
         <button class="govuk-button" data-module="govuk-button">Continue</button>
