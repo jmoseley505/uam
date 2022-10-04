@@ -1,0 +1,52 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Homes for Ukraine: record your interest
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader() }}
+{% endblock %}
+{#
+{% block beforeContent %}
+  <div class="govuk-breadcrumbs">
+    <ol class="govuk-breadcrumbs__list">
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="https://www.gov.uk">Home</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="#">Section</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link">Subsection</a>
+      </li>
+    </ol>
+  </div>
+{% endblock %}
+#}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">
+        Index to HfU prototypes
+      </h1>
+      <br />
+      <h2 class="govuk-heading-m">
+        Expression of Interest
+      </h2>
+      <p><a href="index">Front door v1</a></p>
+
+      <!-- <h2 class="govuk-heading-m">Before you start</h2>
+
+      <p>You can also <a href="#">register by post</a>.</p>
+
+      <p>The online service is also <a href="#">available in Welsh (ar gael yn Gymraeg)</a>.</p>
+
+      <p>You can’t register for this service if you’re in the UK illegally.</p> -->
+
+    </div>
+  </div>
+{% endblock %}
