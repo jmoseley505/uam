@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  Privacy Statement
+  Can we contact you about your registration?
 {% endblock %}
 
 {% block beforeContent %}
@@ -25,7 +25,7 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <form class="form" action="confirmation" method="post">
+      <form class="form" action="research-participation" method="post">
 
         {% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
 
@@ -33,24 +33,24 @@
           name: "waste",
           fieldset: {
             legend: {
-              text: "Confirm you have read the privacy statement and agree that the information you have provided in this form can be used for the Homes for Ukraine scheme
-              ",
+              text: "Can we contact you about your registration?",
               isPageHeading: true,
-              classes: "govuk-fieldset__legend--m"
+              classes: "govuk-fieldset__legend--l"
             }
           },
-          HTML: "<p>kjjkjkjkjkj</p>",
+          hint: {
+            text: "Please tick this box in order for us to contact you about your registration of interest to be a sponsor."
+          },
           items: [
             {
               value: "contact",
-              text: "Yes, I have read the privacy statement and agree that the information I have provided in this form can be used for the Homes for Ukraine scheme"
+              text: "Can we contact you about your registration?"
             }
           ]
         }) }}
 
-    
-          <button class="govuk-button" data-module="govuk-button">Continue</button>
-        </form>
+  <button class="govuk-button" data-module="govuk-button">Continue</button>
+</form>
 
     </div>
   </div>

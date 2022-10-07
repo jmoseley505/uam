@@ -1,0 +1,61 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Is the property you’re offering at a different address to your home?
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+<div>
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+</div>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="how-many-people-will-be-living-at-your-address" method="post">
+
+      {% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+{{ govukRadios({
+  idPrefix: "how many balls",
+  name: "how-many-balls",
+  fieldset: {
+    legend: {
+      text: "Is the property you’re offering at a different address to your home?",
+      isPageHeading: true,
+      classes: "govuk-fieldset__legend--l"
+    }
+  },
+  items: [
+    {
+      value: "yes",
+      text: "Yes",
+      value: "2"
+    },
+    {
+      value: "no",
+      text: "No"
+    }
+  ]
+}) }}
+
+  <button class="govuk-button" data-module="govuk-button">Continue</button>
+</form>
+
+    </div>
+  </div>
+
+{% endblock %}

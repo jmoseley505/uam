@@ -1,0 +1,85 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Is sponsorship right for you?
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+<div>
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+</div>
+{% endblock %}
+
+{% block content %}
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">
+        Is your property suitable for hosting?
+      </h1>
+
+      <p>Here’s a list of things for you to consider about the property you’re offering, before you commit to hosting people from Ukraine:</p>
+    
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>enough space to live comfortably</li>
+        <li>affordable public transport connections</li>
+        <li>employment opportunities nearby</li>
+        <li>schools and education facilities nearby</li>
+        <li>opportunities to find or make friends nearby</li>
+      </ul>
+      <p>Your property doesn’t need to meet every requirement.</p>
+
+     
+      <br/>
+      
+      
+      {% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+{{ govukRadios({
+  idPrefix: "how many balls",
+  name: "how-many-balls",
+  fieldset: {
+    legend: {
+      text: "Could your home be suitable?",
+      isPageHeading: true,
+      classes: "govuk-fieldset__legend--m"
+    }
+  },
+  items: [
+    {
+      value: "yes",
+      text: "Yes"
+    },
+    {
+      value: "no",
+      text: "No"
+    },
+    {
+      value: "not-sure",
+      text: "Not sure"
+    }
+  ]
+}) }}
+
+
+      <form class="form" action="challenges">
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
