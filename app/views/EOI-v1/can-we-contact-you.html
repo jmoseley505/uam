@@ -1,0 +1,58 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Can we contact you about your registration?
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+<div>
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+</div>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="research-participation" method="post">
+
+        {% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
+
+        {{ govukCheckboxes({
+          name: "waste",
+          fieldset: {
+            legend: {
+              text: "Can we contact you about your registration?",
+              isPageHeading: true,
+              classes: "govuk-fieldset__legend--l"
+            }
+          },
+          hint: {
+            text: "Please tick this box in order for us to contact you about your registration of interest to be a sponsor."
+          },
+          items: [
+            {
+              value: "contact",
+              text: "Can we contact you about your registration?"
+            }
+          ]
+        }) }}
+
+  <button class="govuk-button" data-module="govuk-button">Continue</button>
+</form>
+
+    </div>
+  </div>
+
+{% endblock %}

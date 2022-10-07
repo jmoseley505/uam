@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+  Are you hosting a family member?
 {% endblock %}
 
 {% block beforeContent %}
@@ -13,37 +13,28 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      
+      <form class="form" action="why-we-are-collecting-this-data" method="post">
 
-      <form class="form" action="juggling-balls-answer" method="post">
-
-        {% from "govuk/components/radios/macro.njk" import govukRadios %}
+      {% from "govuk/components/radios/macro.njk" import govukRadios %}
 
 {{ govukRadios({
   idPrefix: "how many balls",
   name: "how-many-balls",
   fieldset: {
     legend: {
-      text: "How many balls can you juggle?",
+      text: "Are you hosting a family member?",
       isPageHeading: true,
       classes: "govuk-fieldset__legend--l"
     }
   },
   items: [
     {
-      value: "3 or more",
-      text: "3 or more",
-      checked: checked("how-many-balls", "3 or more")
+      value: "yes",
+      text: "Yes"
     },
     {
-      value: "1 or 2",
-      text: "1 or 2",
-      checked: checked("how-many-balls", "1 or 2")
-    },
-    {
-      value: "None - I can't juggle",
-      text: "None - I can't juggle",
-      checked: checked("how-many-balls", "None - I cannot juggle")
+      value: "no",
+      text: "No"
     }
   ]
 }) }}

@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Confirmation page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <div class="govuk-panel govuk-panel--confirmation">
+        <h1 class="govuk-panel__title">Registration complete</h1>
+        <div class="govuk-panel__body">
+          Your reference number<br><strong>HDJ2123F</strong>
+        </div>
+      </div>
+
+      <p>
+        Thank you for registering your information.
+      </p>
+      <p>
+        You may be contacted by your local council or one of their partners with opportunities to host a 
+        suitable guest from Ukraine, but this is not guaranteed.
+      </p>
+      <p>
+        You should also explore opportunities to fund a suitable guest on your own, using local community 
+        networks or recognised matching organisations.
+      </p>
+
+      <h2 class="govuk-heading-m">Local networks</h2>
+      <p>Local community groups, such as churches, your workplace or social media, can be a great place to find hosting opportunities.</p>
+
+      <h2 class="govuk-heading-m">Matching organisations</h2>
+      <p><a href="">Contact one of these recognised partners</a>, who are specialists in matching people in the UK with guests in Ukraine.</p>
+      
+    </div>
+  </div>
+
+{% endblock %}

@@ -1,0 +1,92 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Have you considered the following?
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+<div>
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+</div>
+{% endblock %}
+
+{% block content %}
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">
+        Have you considered the following?
+      </h1>
+
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita nam voluptate suscipit quisquam? Quia repellendus 
+        perspiciatis illum eligendi molestiae quod fugiat.</p>
+      
+      <h2 class="govuk-heading-m">Things to consider</h2>
+
+      <ol class="govuk-list govuk-list--number">
+  <li>
+    <p>whether your household all agree too</p>
+  </li>
+  <li>
+    <p>how many people you would be able to comfortably host for 12 months</p>
+  </li>
+  <li>
+    <p>the additional cost of having more people in your home</p>
+  </li>
+  <li>
+    <p>how you will share household duties</p>
+  </li>
+  <li>
+    <p>will you feel comfortable working around language barriers with your guest</p>
+  </li>
+</ol>
+
+     
+      <br/>
+      
+      {#
+      {% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+{{ govukRadios({
+  idPrefix: "how many balls",
+  name: "how-many-balls",
+  fieldset: {
+    legend: {
+      text: "Do you wish to be a sponsor?",
+      isPageHeading: true,
+      classes: "govuk-fieldset__legend--m"
+    }
+  },
+  items: [
+    {
+      value: "yes",
+      text: "Yes"
+    },
+    {
+      value: "no",
+      text: "No"
+    }
+  ]
+}) }}
+#}
+
+      <form class="form" action="do-you-know-who-you-want-to-sponsor">
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

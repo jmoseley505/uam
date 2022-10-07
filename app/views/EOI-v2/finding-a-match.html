@@ -1,0 +1,74 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Finding a match
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+<div>
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+</div>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">
+        Finding a match
+      </h1>
+
+      <h2 class="govuk-heading-m">About finding a match</h2>
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita nam voluptate 
+        suscipit quisquam? Quia repellendus perspiciatis illum eligendi molestiae quod fugiat.</p>
+
+<h2 class="govuk-heading-m">Where can I find a match?</h2>
+<p class="govuk-body">You will be able to find a match from the resources:</p>
+<ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+  <li>
+    <p><b>Local FB groups</b></p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi cumque ut ipsum porro.</p>
+  </li>
+  <li>
+    <p><b>Nationwide FB groups</b></p>
+    <p>Officiis nostrum ratione odio magni eveniet placeat ea, iure architecto ad, perferendis unde? Quibusdam dolorem obcaecati eligendi.</p>
+  </li>
+  <li>
+    <p><b>Your Local Authority</b></p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi cumque ut ipsum porro. </p>
+  </li>
+  <li>
+    <p><b>Your local voluntary and community sectors</b></p>
+    <p>Officiis nostrum ratione odio magni eveniet placeat ea, iure architecto ad, perferendis unde? Quibusdam dolorem obcaecati eligendi.</p> 
+    <p>Find out more information from <a href="">your local voluntary and community sectors</a>.</p>
+  </li>
+  <li>
+    <p><b>People in your network</b></p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi cumque ut ipsum porro. </p>
+  </li>
+</ul>
+
+<h2 class="govuk-heading-m">Further assistance</h2>
+<p>If you need assistance finding <a href="https://resetuk.org/toolkits/homes-for-ukraine/training-and-support">training and support</a>, 
+  you can get further information from <a href="https://resetuk.org/">Reset</a>.</p>
+      <br />
+
+      <form class="form" action="confirmation">
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

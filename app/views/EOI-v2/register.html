@@ -1,0 +1,54 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Is sponsorship right for you?
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+<div>
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+</div>
+{% endblock %}
+
+{% block content %}
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">
+        Register for updates and hosting opportunities
+      </h1>
+
+      <p>Next we will ask you for some detailed information to help you find a suitable guest.</p>
+      
+      <p>Registering will allow you to:</p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>be contacted if a suitable guest comes up in your area</li>
+        <li>stay up to date with training and guidance about becoming a host</li>
+        <li>find out about other opportunities to help people from Ukraine</li>
+      </ul>
+      <p><b>Registration does not guarantee you will be offered an opportunity to host a guest</b>, but we will suggest many ways you can find a suitable guest on your own.</p>
+
+     
+      <br/>
+
+      <form class="form" action="enter-your-name">
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
