@@ -1,65 +1,85 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  Homes for Ukraine: record your interest
+  Is sponsorship right for you?
 {% endblock %}
 
-{% block header %}
-  <!-- Blank header with no service name for the start page -->
-  {{ govukHeader() }}
-{% endblock %}
-{#
 {% block beforeContent %}
-  <div class="govuk-breadcrumbs">
-    <ol class="govuk-breadcrumbs__list">
-      <li class="govuk-breadcrumbs__list-item">
-        <a class="govuk-breadcrumbs__link" href="https://www.gov.uk">Home</a>
-      </li>
-      <li class="govuk-breadcrumbs__list-item">
-        <a class="govuk-breadcrumbs__link" href="#">Section</a>
-      </li>
-      <li class="govuk-breadcrumbs__list-item">
-        <a class="govuk-breadcrumbs__link">Subsection</a>
-      </li>
-    </ol>
-  </div>
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+<div>
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+</div>
 {% endblock %}
-#}
 
 {% block content %}
+
+
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <h1 class="govuk-heading-xl">
-        Have you considered
+      <h1 class="govuk-heading-l">
+        Is your property suitable for hosting?
       </h1>
 
-      <p>Local councils support Ukranians who are looking for homes, and rely on the genrous offers of people in their area orffering homes.</p>
+      <p>Here’s a list of things for you to consider about the property you’re offering, before you commit to hosting people from Ukraine:</p>
+    
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>enough space to live comfortably</li>
+        <li>affordable public transport connections</li>
+        <li>employment opportunities nearby</li>
+        <li>schools and education facilities nearby</li>
+        <li>opportunities to find or make friends nearby</li>
+      </ul>
+      <p>Your property doesn’t need to meet every requirement.</p>
+
      
-      <p>Register your availabilty so that you can:</p>
-
-      <ul class="govuk-list govuk-list--bullet">
-        <li>be contacted when hosting opportunities come up in your area</li>
-        <li>stay up to date with training opportunites and guidance on becoming a host</li>
-      </ul>
+      <br/>
       
-      <p>Registration <b>does not guarantee</b> that your local council will contact you and find you a hosting opportunity.</p>
       
-      <a href="have-you-considered" role="button" draggable="false" class="govuk-button govuk-button--start govuk-!-margin-top-2 govuk-!-margin-bottom-8"  data-module="govuk-button">
-        Start now
-        <svg class="govuk-button__start-icon" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19" viewBox="0 0 33 40" aria-hidden="true" focusable="false">
-          <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z"></path>
-        </svg>
-      </a>
+      {% from "govuk/components/radios/macro.njk" import govukRadios %}
 
-      <h2 class="govuk-heading-m">Before you start make sure you have:</h2>
+{{ govukRadios({
+  idPrefix: "how many balls",
+  name: "how-many-balls",
+  fieldset: {
+    legend: {
+      text: "Could your home be suitable?",
+      isPageHeading: true,
+      classes: "govuk-fieldset__legend--m"
+    }
+  },
+  items: [
+    {
+      value: "yes",
+      text: "Yes"
+    },
+    {
+      value: "no",
+      text: "No"
+    },
+    {
+      value: "not-sure",
+      text: "Not sure"
+    }
+  ]
+}) }}
 
-      <ul class="govuk-list govuk-list--bullet">
-        <li>a clean, spacious and safe space for at least one adult</li>
-        <li>agreed with the rest of your household to offer a home for a minimum of 6 months</li>
-        <li>checked that you and your household don't hold a criminal record</li>
-      </ul>
+
+      <form class="form" action="challenges">
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+      </form>
 
     </div>
   </div>
+
 {% endblock %}
