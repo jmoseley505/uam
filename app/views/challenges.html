@@ -5,6 +5,21 @@
 {% endblock %}
 
 {% block beforeContent %}
+<script>
+  function sendForm() {
+    var selectedValue = document.querySelector('input[name="example-hints"]:checked').value;
+  
+    switch(selectedValue){
+        case "gateway":
+           document.location.href = "order-2-1-triage";
+           break;
+        case "verify":
+           document.location.href = "order-4-summary-assoc";
+            break;
+    }
+  }
+  </script>
+
 <div class="govuk-phase-banner">
   <p class="govuk-phase-banner__content">
     <strong class="govuk-tag govuk-phase-banner__content__tag">
@@ -22,7 +37,6 @@
 
 {% block content %}
 
-
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
@@ -34,7 +48,7 @@
     
 
       <ul class="govuk-list govuk-list--bullet">
-        <li>covering additional household costs - you receive £350 a month, but isn't always enough</li>
+        <li>covering additional household costs - you receive £350 a month, but this isn't always enough</li>
         <li>communicating with guests who don't speak English fluently</li>
         <li>changes in family dynamics</li>
         <li>differences in living habits, including household tasks and eating preferences</li>
