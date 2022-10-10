@@ -41,56 +41,23 @@
     <div class="govuk-grid-column-two-thirds">
 
       <h1 class="govuk-heading-l">
-        There are some challenges
+        Recognised partners
       </h1>
 
-      <p>These are some of the challenges hosts may face, so you need to carefully consider:</p>
+      <p>Contact one of the following organisations to be matched with a Ukranian person more quickly:</p>
     
 
       <ul class="govuk-list govuk-list--bullet">
-        <li>covering additional household costs - you receive £350 a month, but this isn't always enough</li>
-        <li>communicating with guests who don't speak English fluently</li>
-        <li>changes in family dynamics</li>
-        <li>differences in living habits, including household tasks and eating preferences</li>
-        <li>deciding on boundaries and how you want to live together.</li>
+        <li><a href="">Citizens UK</a> (via USPUK)</li>
+        <li><a href="">Refugees at Home</a></li>
+        <li><a href="">RESET</a></li>
+        <li><a href="">World Jewish Relief</a></li>
+        <li><a href="">Love Bristol</a></li>
       </ul>
-
-     
-      <br/>
-      
-      
-      {% from "govuk/components/radios/macro.njk" import govukRadios %}
-
-{{ govukRadios({
-  idPrefix: "how many balls",
-  name: "how-many-balls",
-  fieldset: {
-    legend: {
-      text: "Do you feel able to take on these challenges?",
-      isPageHeading: true,
-      classes: "govuk-fieldset__legend--m"
-    }
-  },
-  items: [
-    {
-      value: "yes",
-      text: "Yes"
-    },
-    {
-      value: "no",
-      text: "No"
-    },
-    {
-      value: "not-sure",
-      text: "Not sure"
-    }
-  ]
-}) }}
+      <br />
 
 
-      <form class="form" action="register">
-        <button class="govuk-button" data-module="govuk-button">Continue</button>
-      </form>
+
 
     </div>
   </div>
