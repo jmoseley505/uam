@@ -5,7 +5,20 @@
 {% endblock %}
 
 {% block beforeContent %}
-
+<script>
+  function sendForm() {
+    var selectedValue = document.querySelector('input[name="example-hints"]:checked').value;
+  
+    switch(selectedValue){
+        case "yes":
+           document.location.href = "register";
+           break;
+        case "no":
+           document.location.href = "order-4-summary-assoc";
+            break;
+    }
+  }
+  </script>
 
 <div class="govuk-phase-banner">
   <p class="govuk-phase-banner__content">
@@ -45,13 +58,12 @@
      
       <br/>
       
-      <form class="form" action="/challenges-redirect" method="post">
-      
+      <form class="form" href=sendform()>
       {% from "govuk/components/radios/macro.njk" import govukRadios %}
 
 {{ govukRadios({
-  idPrefix: "challenges-redirect-1",
-  name: "challenges-redirect-1",
+  idPrefix: "how many balls",
+  name: "example-hints",
   fieldset: {
     legend: {
       text: "Do you feel able to take on these challenges?",
@@ -75,7 +87,7 @@
   ]
 }) }}
 
-
+    
       
         <button class="govuk-button" data-module="govuk-button">Continue</button>
       </form>
