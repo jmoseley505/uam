@@ -5,20 +5,7 @@
 {% endblock %}
 
 {% block beforeContent %}
-<script>
-  function sendForm() {
-    var selectedValue = document.querySelector('input[name="example-hints"]:checked').value;
-  
-    switch(selectedValue){
-        case "yes":
-           document.location.href = "register";
-           break;
-        case "no":
-           document.location.href = "order-4-summary-assoc";
-            break;
-    }
-  }
-  </script>
+
 
 <div class="govuk-phase-banner">
   <p class="govuk-phase-banner__content">
@@ -39,6 +26,18 @@
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
+      {% from "govuk/components/error-summary/macro.njk" import govukErrorSummary %}
+
+{{ govukErrorSummary({
+  titleText: "There is a problem",
+  errorList: [
+    {
+      text: "Select an option",
+      href: "#challenges-redirect-1"
+    }
+  ]
+}) }}
+
 
       <h1 class="govuk-heading-l">
         There are some challenges
@@ -58,12 +57,13 @@
      
       <br/>
       
-      <form class="form" href=sendform()>
+      <form class="form" action="/challenges-redirect" method="post">
+      
       {% from "govuk/components/radios/macro.njk" import govukRadios %}
 
 {{ govukRadios({
-  idPrefix: "how many balls",
-  name: "example-hints",
+  idPrefix: "challenges-redirect-1",
+  name: "challenges-redirect-1",
   fieldset: {
     legend: {
       text: "Do you feel able to take on these challenges?",
@@ -84,11 +84,12 @@
       value: "not-sure",
       text: "Not sure"
     }
-  ]
+  ],
+  errorMessage: {
+    text: "Select an option"
+  }
 }) }}
-
-    
-      
+-
         <button class="govuk-button" data-module="govuk-button">Continue</button>
       </form>
 
