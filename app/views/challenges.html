@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  Is sponsorship right for you?
+  Challenges
 {% endblock %}
 
 {% block beforeContent %}
@@ -62,15 +62,17 @@
   items: [
     {
       value: "yes",
-      text: "Yes"
+      text: "Yes",
+      hint: {
+        text: "I'm still happy to host"
+      }
     },
     {
       value: "no",
-      text: "No"
-    },
-    {
-      value: "not-sure",
-      text: "Not sure"
+      text: "No",
+      hint: {
+        text: "This isn't something I can do right now"
+      }
     }
   ]
 }) }}

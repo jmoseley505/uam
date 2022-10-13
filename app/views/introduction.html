@@ -1,0 +1,57 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Is sponsorship right for you?
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+<div>
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+</div>
+{% endblock %}
+
+{% block content %}
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">
+        We are prioritising finding new hosts for Ukrainians already in the UK
+      </h1>
+
+      <p>Ukranians who arrived in the UK over 6 months ago are looking for a new host. 
+        This is normally because circumstances have changed for their first host, such as 
+        deciding to moveor have a baby.</p>
+
+      <p>Guests already living in the UK typically need far less support from their hosts, 
+        as they may already have found work and settled into their local area.</p>
+      
+        <br />
+
+        {% from "govuk/components/details/macro.njk" import govukDetails %}
+
+        {{ govukDetails({
+          summaryText: "How do I sponsor Ukranian's travelling abroad",
+          text: "We need to know your nationality so we can work out which elections you’re entitled to vote in. If you cannot provide your nationality, you’ll have to send copies of identity documents through the post."
+        }) }}
+
+      <br>
+      <form class="form" action="is-your-property-suitable">
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

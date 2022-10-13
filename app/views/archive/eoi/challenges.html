@@ -1,10 +1,12 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  Is sponsorship right for you?
+  Challenges
 {% endblock %}
 
 {% block beforeContent %}
+
+
 <div class="govuk-phase-banner">
   <p class="govuk-phase-banner__content">
     <strong class="govuk-tag govuk-phase-banner__content__tag">
@@ -22,39 +24,37 @@
 
 {% block content %}
 
-
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
       <h1 class="govuk-heading-l">
-        Is your property suitable for hosting?
+        There are some challenges
       </h1>
 
-      <p>Here’s a list of things for you to consider about the property you’re offering, before you commit to hosting people from Ukraine:</p>
+      <p>These are some of the challenges hosts may face, so you need to carefully consider:</p>
     
 
       <ul class="govuk-list govuk-list--bullet">
-        <li>enough space to live comfortably</li>
-        <li>affordable public transport connections</li>
-        <li>employment opportunities nearby</li>
-        <li>schools and education facilities nearby</li>
-        <li>opportunities to find or make friends nearby</li>
+        <li>covering additional household costs - you receive £350 a month, but this isn't always enough</li>
+        <li>communicating with guests who don't speak English fluently</li>
+        <li>changes in family dynamics</li>
+        <li>differences in living habits, including household tasks and eating preferences</li>
+        <li>deciding on boundaries and how you want to live together.</li>
       </ul>
-      <p>Your property doesn’t need to meet every requirement.</p>
 
      
       <br/>
       
-      <form class="form" action="/suitability-redirect" method="post">
+      <form class="form" action="/challenges-redirect" method="post">
       
       {% from "govuk/components/radios/macro.njk" import govukRadios %}
 
 {{ govukRadios({
-  idPrefix: "suitability-redirect-1",
-  name: "suitability-redirect-1",
+  idPrefix: "challenges-redirect-1",
+  name: "challenges-redirect-1",
   fieldset: {
     legend: {
-      text: "Could your home be suitable?",
+      text: "Do you feel able to take on these challenges?",
       isPageHeading: true,
       classes: "govuk-fieldset__legend--m"
     }
@@ -64,21 +64,26 @@
       value: "yes",
       text: "Yes",
       hint: {
-        text: "I think my home is suitable"
+        text: "I'm still happy to host"
       }
     },
     {
       value: "no",
       text: "No",
       hint: {
-        text: "My home home isn't suitable for hosting"
+        text: "This isn't something I can do right now"
+      }
+    },
+    {
+      value: "not-sure",
+      text: "Not sure",
+      hint: {
+        text: "I'd like to learn more before I decide"
       }
     }
   ]
 }) }}
-
-
-      
+-
         <button class="govuk-button" data-module="govuk-button">Continue</button>
       </form>
 

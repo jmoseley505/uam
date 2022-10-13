@@ -27,7 +27,7 @@
     <div class="govuk-grid-column-two-thirds">
 
       <h1 class="govuk-heading-l">
-        Read more to help make your decision
+        Read more to help make your decision 1
       </h1>
 
       <p>If you're not ready to make your decision yet, we have a lot more useful information you can read:</p>
@@ -42,11 +42,38 @@
      
       <br/>
       
+      <form class="form" action="/read-more-1-redirect" method="post">
       
-      
+        {% from "govuk/components/radios/macro.njk" import govukRadios %}
+  
+  {{ govukRadios({
+    idPrefix: "read-more-1-redirect-1",
+    name: "read-more-1-redirect-1",
+    fieldset: {
+      legend: {
+        text: "Could your home be suitable?",
+        isPageHeading: true,
+        classes: "govuk-fieldset__legend--m"
+      }
+    },
+    items: [
+      {
+        value: "yes",
+        text: "Yes",
+        hint: {
+          text: "I think my home is suitable"
+        }
+      },
+      {
+        value: "no",
+        text: "No",
+        hint: {
+          text: "My home home isn't suitable for hosting"
+        }
+      }
+    ]
+  }) }}
 
-
-      <form class="form" action="challenges">
         <button class="govuk-button" data-module="govuk-button">Continue</button>
       </form>
 
