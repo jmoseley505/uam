@@ -23,39 +23,56 @@
 {% block content %}
 
   <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-grid-column-full-width">
 
-      <form class="form" action="/commitment-redirect" method="post">
+      <form class="form" action="how-many-people-will-be-living-at-your-address" method="post">
 
       {% from "govuk/components/radios/macro.njk" import govukRadios %}
 
+
+{% from "govuk/components/radios/macro.njk" import govukRadios %}
+{% from "govuk/components/date-input/macro.njk" import govukDateInput %}
+
+{% set dateHtml %}
+{{ govukDateInput({
+  id: "contact-by-text",
+  name: "contact-by-text",
+  type: "tel",
+  autocomplete: "tel",
+  classes: "govuk-!-width-one-third",
+  label: {
+    text: "Test"
+  }
+}) }}
+{% endset -%}
+
 {{ govukRadios({
-  idPrefix: "commitment-redirect-1",
-  name: "commitment-redirect-1",
+  name: "contact",
   fieldset: {
     legend: {
-      text: "Can you commit to hosting for at least 6 months?",
+      text: "How soon can you start hosting someone?",
       isPageHeading: true,
       classes: "govuk-fieldset__legend--l"
     }
   },
   hint: {
-    text: "You must be able to commit to hosting someone for at least 6 months to be participate in the scheme."
+    text: "Select one option."
   },
   items: [
     {
-      value: "yes",
-      text: "Yes"
+      value: "soon-as-possible",
+      text: "As soon as possible"
     },
     {
-      value: "no",
-      text: "No"
+      value: "specific-date",
+      text: "From a specific date",
+      conditional: {
+        html: dateHtml
+      }
     }
   ]
 }) }}
 
-<p>Find out what you can do <a href="https://www.gov.uk/guidance/homes-for-ukraine-sponsor-guidance" class="govuk-link" rel="noreferrer noopener" target="_blank">if the arrangement doesn’t work out (opens in new tab)</a>.</p>
-<br />
   <button class="govuk-button" data-module="govuk-button">Continue</button>
 </form>
 

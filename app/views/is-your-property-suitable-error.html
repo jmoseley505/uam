@@ -25,6 +25,17 @@
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
+      {% from "govuk/components/error-summary/macro.njk" import govukErrorSummary %}
+
+      {{ govukErrorSummary({
+        titleText: "There is a problem",
+        errorList: [
+          {
+            text: "Select an option",
+            href: "#suitability-redirect-1"
+          }
+        ]
+      }) }}
 
       <h1 class="govuk-heading-l">
         Is your property suitable for hosting?
@@ -74,7 +85,10 @@
         text: "My home home isn't suitable for hosting"
       }
     }
-  ]
+  ],
+  errorMessage: {
+    text: "Select an option"
+  }
 }) }}
 
 <p><a href="https://ukstandswithukraine.campaign.gov.uk" class="govuk-link" rel="noreferrer noopener" target="_blank">Learn more (opens in a new tab)</a></p>

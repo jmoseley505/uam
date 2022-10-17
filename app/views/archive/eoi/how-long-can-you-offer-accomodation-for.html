@@ -25,37 +25,36 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <form class="form" action="/commitment-redirect" method="post">
+      <form class="form" action="how-many-single-rooms-are-available" method="post">
 
       {% from "govuk/components/radios/macro.njk" import govukRadios %}
 
 {{ govukRadios({
-  idPrefix: "commitment-redirect-1",
-  name: "commitment-redirect-1",
+  idPrefix: "how many balls",
+  name: "how-many-balls",
   fieldset: {
     legend: {
-      text: "Can you commit to hosting for at least 6 months?",
+      text: "How long can you offer accommodation for?",
       isPageHeading: true,
       classes: "govuk-fieldset__legend--l"
     }
   },
-  hint: {
-    text: "You must be able to commit to hosting someone for at least 6 months to be participate in the scheme."
-  },
   items: [
     {
-      value: "yes",
-      text: "Yes"
+      value: "6-to-9-months",
+      text: "From 6 to 9 months"
     },
     {
-      value: "no",
-      text: "No"
+      value: "10-to-12-months",
+      text: "From 10 to 12 months"
+    },
+    {
+      value: "more-than-12-months",
+      text: "More than 12 months"
     }
   ]
 }) }}
 
-<p>Find out what you can do <a href="https://www.gov.uk/guidance/homes-for-ukraine-sponsor-guidance" class="govuk-link" rel="noreferrer noopener" target="_blank">if the arrangement doesn’t work out (opens in new tab)</a>.</p>
-<br />
   <button class="govuk-button" data-module="govuk-button">Continue</button>
 </form>
 
