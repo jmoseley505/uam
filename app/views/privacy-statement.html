@@ -27,26 +27,25 @@
 
       <form class="form" action="confirmation" method="post">
 
-        {% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
-
-        {{ govukCheckboxes({
-          name: "waste",
-          fieldset: {
-            legend: {
-              text: "Confirm you have read the privacy statement and agree that the information you have provided in this form can be used for the Homes for Ukraine scheme
-              ",
-              isPageHeading: true,
-              classes: "govuk-fieldset__legend--m"
-            }
-          },
-          HTML: "<p>kjjkjkjkjkj</p>",
-          items: [
-            {
-              value: "contact",
-              text: "Yes, I have read the privacy statement and agree that the information I have provided in this form can be used for the Homes for Ukraine scheme"
-            }
-          ]
-        }) }}
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+              <h1 class="govuk-fieldset__heading">
+                Confirm you have read the privacy statement and agree that the information you have provided in this form can be used for the Homes for Ukraine scheme
+              </h1>
+            </legend>
+            <p><a href="https://www.gov.uk/guidance/homes-for-ukraine-visa-sponsorship-scheme-privacy-notice" class="govuk-link" rel="noreferrer noopener" target="_blank">Privacy statement</a></p>
+            <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+                <label class="govuk-label govuk-checkboxes__label" for="waste">
+                  Yes, I have read the privacy statement and agree that the information I have provided in this form can be used for the Homes for Ukraine scheme
+                </label>
+              </div>
+            </div>
+        
+          </fieldset>
+        </div>
 
     
           <button class="govuk-button" data-module="govuk-button">Continue</button>
