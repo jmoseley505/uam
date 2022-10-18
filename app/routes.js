@@ -33,7 +33,7 @@ router.post('/challenges-redirect', function (req, res) {
   // Check whether the variable matches a condition
   if (challengesRedirect == "yes"){
     // Send user to register page
-    res.redirect('how-long-can-you-offer-accomodation-for')
+    res.redirect('hosting-length')
   } 
   if (challengesRedirect == "no"){
     // Send user to other ways you can help page
