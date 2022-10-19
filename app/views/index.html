@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  Is sponsorship right for you?
+  Homes for Ukraine: Register for hosting opportunities
 {% endblock %}
 
 {% block beforeContent %}
@@ -27,57 +27,57 @@
     <div class="govuk-grid-column-two-thirds">
 
       <h1 class="govuk-heading-l">
-        Is your property suitable for hosting?
+        Homes for Ukraine: Register for hosting opportunities
       </h1>
 
-      <p>Here’s a list of things for you to consider about the property you’re offering, before you commit to hosting people from Ukraine:</p>
-    
+      <p>Thanks to the generosity of the British people, over 100,000 people from Ukraine 
+        have arrived in the UK and are living safely in their sponsors’ homes.</p>
 
-      <ul class="govuk-list govuk-list--bullet">
-        <li>enough space to live comfortably</li>
-        <li>affordable public transport connections</li>
-        <li>employment opportunities nearby</li>
-        <li>schools and education facilities nearby</li>
-        <li>opportunities to find or make friends nearby</li>
-      </ul>
-      <p>Your property doesn’t need to meet every requirement.</p>
+      <p>Many of these guests now need to find a new host while they prepare to live independently, 
+        because their original hosts are reaching the end of their 6 month commitment.
+      </p>
 
-     
-      <br/>
+      <p>New hosts will receive a thank-you payment £350 a month, while their guests are staying with them.
+      </p>
+
+      <p>Guests already living in the UK usually need far less support 
+        from their hosts than someone who has just landed in the UK. </p>
+
+      <p>Many guests have already found work and are settling into 
+        their local area, making them more self-sufficient.</p>
       
+        <br />
+
+        
+        <h2 class="govuk-heading-m">Check if being a host is right for you
+        </h2>
+      <p>Hosting people from another country is a big commitment, so we’ve 
+        prepared some questions to help you decide if it’s right for you.</p>
+
+   
+      <a href="is-your-property-suitable" role="button" draggable="false" class="govuk-button govuk-button--start govuk-!-margin-top-2 govuk-!-margin-bottom-8"  data-module="govuk-button">
+        Start now
+        <svg class="govuk-button__start-icon" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19" viewBox="0 0 33 40" aria-hidden="true" focusable="false">
+          <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z"></path>
+        </svg>
+      </a>
+
+        <!-- <details class="govuk-details" data-module="govuk-details">
+          <summary class="govuk-details__summary">
+            <span class="govuk-details__summary-text">
+              What is the difference between a sponsor and a host?
+            </span>
+          </summary>
+          <div class="govuk-details__text">
+            <p>We need to know your nationality so we can work out which elections you’re entitled to vote in. 
+              If you cannot provide your nationality, you’ll have to send copies of identity documents through the post.
+            </p>
+
+            <p>A host is a person who provides accommodation to people from Ukraine. A host does not have to be a sponsor.</p>
+          </div>
+        </details> -->
+
       
-      {% from "govuk/components/radios/macro.njk" import govukRadios %}
-
-{{ govukRadios({
-  idPrefix: "how many balls",
-  name: "how-many-balls",
-  fieldset: {
-    legend: {
-      text: "Could your home be suitable?",
-      isPageHeading: true,
-      classes: "govuk-fieldset__legend--m"
-    }
-  },
-  items: [
-    {
-      value: "yes",
-      text: "Yes"
-    },
-    {
-      value: "no",
-      text: "No"
-    },
-    {
-      value: "not-sure",
-      text: "Not sure"
-    }
-  ]
-}) }}
-
-
-      <form class="form" action="challenges">
-        <button class="govuk-button" data-module="govuk-button">Continue</button>
-      </form>
 
     </div>
   </div>
