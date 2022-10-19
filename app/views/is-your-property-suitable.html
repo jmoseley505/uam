@@ -41,15 +41,17 @@
         <li>schools and education facilities nearby</li>
         <li>opportunities to socialise in the area</li>
       </ul>
-      <p>Your property doesn’t have to meet every requirement, but the more it has, the better your chances of becoming a host.</p>
       
-      <p><a href="https://www.gov.uk/guidance/homes-for-ukraine-sponsor-guidance" class="govuk-link" rel="noreferrer noopener" target="_blank">Learn more about suitable accomodation for hosting (opens in a new tab)</a></p>
+      <p><a href="https://www.gov.uk/guidance/homes-for-ukraine-sponsor-guidance" class="govuk-link" rel="noreferrer noopener" target="_blank">Read the guidance for sponsors (opens in a new tab)</a> to learn more about suitable accomodation.</p>
      
       <br/>
       
       <form class="form" action="/suitability-redirect" method="post">
       
       {% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+
+
 
 {{ govukRadios({
   idPrefix: "suitability-redirect-1",
@@ -60,6 +62,9 @@
       isPageHeading: true,
       classes: "govuk-fieldset__legend--m"
     }
+  },
+  hint: {
+    text: "Your property doesn’t have to meet every requirement, but the more it has, the better your chances of becoming a host."
   },
   items: [
     {
@@ -80,13 +85,8 @@
 }) }}
 
 
-
-
-
 <br />
 
-
-      
         <button class="govuk-button" data-module="govuk-button">Continue</button>
       </form>
 
@@ -100,3 +100,37 @@
 {{ govukInsetText({
   html: '<p><a href="https://www.gov.uk/guidance/homes-for-ukraine-sponsor-guidance" class="govuk-link" rel="noreferrer noopener" target="_blank">Learn more about suitable accomodation for hosting <br />(opens in a new tab)</a></p>'
 }) }}
+
+{#
+{{ govukRadios({
+  idPrefix: "suitability-redirect-1",
+  name: "suitability-redirect-1",
+  fieldset: {
+    legend: {
+      text: "Do you think your home is suitable?",
+      isPageHeading: true,
+      classes: "govuk-fieldset__legend--m"
+    },
+    hint: {
+      text: "This includes changing your last name or spelling your name differently."
+    }
+  },
+  items: [
+    {
+      value: "yes",
+      text: "Yes",
+      hint: {
+        text: "I think my home is suitable"
+      }
+    },
+    {
+      value: "no",
+      text: "No",
+      hint: {
+        text: "My home is not suitable for hosting"
+      }
+    }
+  ]
+}) }}
+
+#}
