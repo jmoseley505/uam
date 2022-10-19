@@ -42,7 +42,8 @@
         <li>opportunities to socialise in the area</li>
       </ul>
       <p>Your property doesn’t have to meet every requirement, but the more it has, the better your chances of becoming a host.</p>
-
+      
+      <p><a href="https://www.gov.uk/guidance/homes-for-ukraine-sponsor-guidance" class="govuk-link" rel="noreferrer noopener" target="_blank">Learn more about suitable accomodation for hosting (opens in a new tab)</a></p>
      
       <br/>
       
@@ -78,7 +79,9 @@
   ]
 }) }}
 
-<p><a href="https://www.gov.uk/guidance/homes-for-ukraine-sponsor-guidance" class="govuk-link" rel="noreferrer noopener" target="_blank">Learn more about suitable accomodation for hosting (opens in a new tab)</a></p>
+
+
+
 
 <br />
 
@@ -91,3 +94,9 @@
   </div>
 
 {% endblock %}
+
+{% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
+
+{{ govukInsetText({
+  html: '<p><a href="https://www.gov.uk/guidance/homes-for-ukraine-sponsor-guidance" class="govuk-link" rel="noreferrer noopener" target="_blank">Learn more about suitable accomodation for hosting <br />(opens in a new tab)</a></p>'
+}) }}
