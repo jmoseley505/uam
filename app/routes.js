@@ -11,7 +11,7 @@ router.post('/suitability-redirect', function (req, res) {
   // Check whether the variable matches a condition
   if (suitabilityRedirect == "yes"){
     // Send user to register page
-    res.redirect('challenges')
+    res.redirect('important-things-to-consider')
   } 
   if (suitabilityRedirect == "no"){
     // Send user to other ways you can help page
@@ -33,7 +33,7 @@ router.post('/challenges-redirect', function (req, res) {
   // Check whether the variable matches a condition
   if (challengesRedirect == "yes"){
     // Send user to register page
-    res.redirect('hosting-length')
+    res.redirect('hosting-commitment')
   } 
   if (challengesRedirect == "no"){
     // Send user to other ways you can help page
@@ -55,7 +55,7 @@ router.post('/commitment-redirect', function (req, res) {
   // Check whether the variable matches a condition
   if (commitmentRedirect == "yes"){
     // Send user to register page
-    res.redirect('register')
+    res.redirect('now-we-need-your-information')
   } 
   else {
     // Stays on challenges page
