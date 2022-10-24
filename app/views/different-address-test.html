@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
- Does the property, or any of the properties, have step-free access?
+  Is the property you’re offering at a different address to your home?
 {% endblock %}
 
 {% block beforeContent %}
@@ -25,32 +25,29 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <form class="form" action="/any-more-redirect" method="post">
+      <form class="form" action="/different-address-redirect" method="post">
 
       {% from "govuk/components/radios/macro.njk" import govukRadios %}
 
 {{ govukRadios({
-  idPrefix: "any-more-redirect-1",
-  name: "any-more-redirect-1",
+  idPrefix: "different-address-redirect-1",
+  name: "different-address-redirect-1",
   fieldset: {
     legend: {
-      text: "Are you offering any more properties?",
+      text: "Is the property you’re offering at a different address to your home?",
       isPageHeading: true,
       classes: "govuk-fieldset__legend--l"
     }
   },
-  hint: {
-    text: "If you have more properties, you will be able to share this information when you are contacted by your local authority."
-  },
   items: [
-  {
-    value: "yes",
-    text: "Yes"
-  },
-  {
-    value: "no",
-    text: "No"
-  }
+    {
+      value: "yes",
+      text: "Yes"
+    },
+    {
+      value: "no",
+      text: "No"
+    }
   ]
 }) }}
 

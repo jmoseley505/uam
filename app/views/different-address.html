@@ -25,13 +25,13 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <form class="form" action="hosting-start-date" method="post">
+      <form class="form" action="/different-address-redirect" method="post">
 
-      {% from "govuk/components/radios/macro.njk" import govukRadios %}
-
-{{ govukRadios({
-  idPrefix: "how many balls",
-  name: "how-many-balls",
+        {% from "govuk/components/radios/macro.njk" import govukRadios %}
+  
+  {{ govukRadios({
+    idPrefix: "different-address-redirect-1",
+    name: "different-address-redirect-1",
   fieldset: {
     legend: {
       text: "Is the property you’re offering at a different address to your home?",
@@ -42,8 +42,7 @@
   items: [
     {
       value: "yes",
-      text: "Yes",
-      value: "2"
+      text: "Yes"
     },
     {
       value: "no",

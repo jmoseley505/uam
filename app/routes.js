@@ -63,4 +63,40 @@ router.post('/commitment-redirect', function (req, res) {
   }
 })
 
+// Add your routes here - above the module.exports line
+// Run this code when a form is submitted to 'challenges-redirect'
+router.post('/different-address-redirect', function (req, res) {
+
+  // Make a variable and give it the value from 'challenges-redirect-1'
+  var differentAddressRedirect = req.session.data['different-address-redirect-1']
+
+  // Check whether the variable matches a condition
+  if (differentAddressRedirect == "yes"){
+    // Send user to register page
+    res.redirect('enter-their-full-address')
+  } 
+  else {
+    // Stays on challenges page
+    res.redirect('hosting-start-date')
+  }
+})
+
+// Add your routes here - above the module.exports line
+// Run this code when a form is submitted to 'challenges-redirect'
+router.post('/any-more-redirect', function (req, res) {
+
+  // Make a variable and give it the value from 'challenges-redirect-1'
+  var anyMoreRedirect = req.session.data['any-more-redirect-1']
+
+  // Check whether the variable matches a condition
+  if (anyMoreRedirect == "yes"){
+    // Send user to register page
+    res.redirect('share-information')
+  } 
+  else {
+    // Stays on challenges page
+    res.redirect('hosting-start-date')
+  }
+})
+
 module.exports = router
