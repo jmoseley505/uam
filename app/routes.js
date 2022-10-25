@@ -41,7 +41,7 @@ router.post('/challenges-redirect', function (req, res) {
   } 
  else {
     // Stays on challenges page
-    res.redirect('challenges-error')
+    res.redirect('important-things-to-consider-error')
   }
 })
 

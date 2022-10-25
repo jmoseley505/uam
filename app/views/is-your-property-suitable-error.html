@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  Is your property suitable for hosting?
+  Check if your property is suitable for hosting
 {% endblock %}
 
 {% block beforeContent %}
@@ -55,10 +55,8 @@
         <li>opportunities to socialise in the area</li>
       </ul>
       
-      <p>Your property doesn’t need to meet every requirement</p>
-
-      <p><a href="https://ukstandswithukraine.campaign.gov.uk" class="govuk-link" rel="noreferrer noopener" target="_blank">Learn more about suitable accomodation for hosting (opens in a new tab)</a></p>
-
+      <!-- <p><a href="https://www.gov.uk/guidance/homes-for-ukraine-sponsor-guidance" class="govuk-link" rel="noreferrer noopener" target="_blank">Read the guidance for sponsors (opens in a new tab)</a> to learn more about suitable accommodation.</p> -->
+     
       <br/>
       
       <form class="form" action="/suitability-redirect" method="post">
@@ -87,7 +85,7 @@
       value: "no",
       text: "No",
       hint: {
-        text: "My home home isn't suitable for hosting"
+        text: "My home is not suitable for hosting"
       }
     }
   ],
