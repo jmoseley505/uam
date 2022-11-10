@@ -22,26 +22,24 @@
 
 {% block content %}
 
+<div class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" data-module="govuk-error-summary">
+  <h2 class="govuk-error-summary__title" id="error-summary-title">
+    There is a problem
+  </h2>
+  <div class="govuk-error-summary__body">
+    <ul class="govuk-list govuk-error-summary__list">
+      <li>
+        <a href="#full-name-input">You must enter a number from 1-9</a>
+      </li>
+    </ul>
+  </div>
+</div>
 
 
-      <div class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" data-module="govuk-error-summary">
-        <h2 class="govuk-error-summary__title" id="error-summary-title">
-          There is a problem
-        </h2>
-        <div class="govuk-error-summary__body">
-          <ul class="govuk-list govuk-error-summary__list">
-            <li>
-              <a href="#full-name-input">You must enter a number from 0-9</a>
-            </li>
-            <li>
-              <a href="#full-name-input">You must enter a number from 0-9</a>
-            </li>
-          </ul>
-        </div>
-      </div>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      
 
-      <div class="govuk-grid-row">
-        <div class="govuk-grid-column-two-thirds">
       <h1 class="govuk-heading-l">
         How many bedrooms are available for guests in the property you’re registering now?
       </h1>
@@ -54,23 +52,19 @@
           Single bedrooms
         </label>
         <p id="national-insurance-number-error" class="govuk-error-message">
-          <span class="govuk-visually-hidden">Error:</span> You must enter a number from 0-9
+          <span class="govuk-visually-hidden">Error:</span> You must enter a number from 1-9
         </p>
-        
         <input class="govuk-input govuk-input--error govuk-input--width-2" id="national-insurance-number width-2" name="national-insurance-number width-2" type="text" aria-describedby="national-insurance-number-hint national-insurance-number-error">
       </div>
 
-      <div class="govuk-form-group govuk-form-group--error">
-        <label class="govuk-label" for="national-insurance-number">
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="width-2">
           Double bedrooms
         </label>
-        <p id="national-insurance-number-error" class="govuk-error-message">
-          <span class="govuk-visually-hidden">Error:</span> You must enter a number from 0-9
-        </p>
-        <input class="govuk-input govuk-input--error govuk-input--width-2" id="national-insurance-number width-2" name="national-insurance-number width-2" type="text" aria-describedby="national-insurance-number-hint national-insurance-number-error">
+        <input class="govuk-input govuk-input--width-2" id="width-2" name="width-2" type="text" value="0">
       </div>
 
-      <form class="form" action="how-many-bedrooms-error-2" method="post">
+      <form class="form" action="step-free-access" method="post">
         <button class="govuk-button" data-module="govuk-button">Continue</button>
       </form>
 
