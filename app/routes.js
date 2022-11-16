@@ -55,7 +55,7 @@ router.post('/commitment-redirect', function (req, res) {
   // Check whether the variable matches a condition
   if (commitmentRedirect == "yes"){
     // Send user to register page
-    res.redirect('now-we-need-your-information')
+    res.redirect('which-country')
   } 
   else {
     // Stays on challenges page
@@ -96,6 +96,32 @@ router.post('/any-more-redirect', function (req, res) {
   else {
     // Stays on challenges page
     res.redirect('hosting-start-date')
+  }
+})
+
+// Add your routes here - above the module.exports line
+// Run this code when a form is submitted to 'challenges-redirect'
+router.post('/which-country-redirect', function (req, res) {
+
+  // Make a variable and give it the value from 'challenges-redirect-1'
+  var whichCountryRedirect = req.session.data['which-country-1']
+
+  // Check whether the variable matches a condition
+  if (whichCountryRedirect == "england"){
+    // Send user to register page
+    res.redirect('now-we-need-your-information')
+  } 
+  if (whichCountryRedirect == "northern-ireland"){
+    // Send user to other ways you can help page
+    res.redirect('now-we-need-your-information')
+  } 
+  if (whichCountryRedirect == "scotland"){
+    // Send user to other ways you can help page
+    res.redirect('https://www.gov.scot/ukraine/')
+  } 
+  else {
+    // Stays on challenges page
+    res.redirect('https://gov.wales/offer-home-wales-refugees-ukraine')
   }
 })
 
