@@ -22,21 +22,18 @@
 
 {% block content %}
 
-{% from "govuk/components/error-summary/macro.njk" import govukErrorSummary %}
-
-      {{ govukErrorSummary({
-        titleText: "There is a problem",
-        errorList: [
-          {
-            text: "Enter a number from 1-9 in either field",
-            href: "#suitability-redirect-1"
-          },
-          {
-            text: "Enter a number from 1-9 in either field",
-            href: "#suitability-redirect-1"
-          }
-        ]
-      }) }}
+<div class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" data-module="govuk-error-summary">
+  <h2 class="govuk-error-summary__title" id="error-summary-title">
+    There is a problem
+  </h2>
+  <div class="govuk-error-summary__body">
+    <ul class="govuk-list govuk-error-summary__list">
+      <li>
+        <a href="#full-name-input">You must enter a number from 1 to 9 in either field</a>
+      </li>
+    </ul>
+  </div>
+</div>
 
 
   <div class="govuk-grid-row">
