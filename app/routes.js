@@ -109,11 +109,11 @@ router.post('/which-country-redirect', function (req, res) {
   // Check whether the variable matches a condition
   if (whichCountryRedirect == "england"){
     // Send user to register page
-    res.redirect('now-we-need-your-information')
+    res.redirect('is-your-property-suitable')
   } 
   if (whichCountryRedirect == "northern-ireland"){
     // Send user to other ways you can help page
-    res.redirect('now-we-need-your-information')
+    res.redirect('is-your-property-suitable')
   } 
   if (whichCountryRedirect == "scotland"){
     // Send user to other ways you can help page

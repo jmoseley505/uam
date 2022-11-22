@@ -1,0 +1,71 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Is the property you’re offering at a different address to your home?
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+<div>
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+</div>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="/which-country-redirect" method="post">
+
+        {% from "govuk/components/radios/macro.njk" import govukRadios %}
+  
+  {{ govukRadios({
+    idPrefix: "which-country-1",
+    name: "which-country-1",
+  fieldset: {
+    legend: {
+      text: "Where is the accommodation you’re offering?",
+      isPageHeading: true,
+      classes: "govuk-fieldset__legend--l"
+    }
+  },
+  hint: {
+    text: "This could be different from where you live if you are not offering accommodation in your home."
+  },
+  items: [
+    {
+      value: "england",
+      text: "England"
+    },
+    {
+      value: "northern-ireland",
+      text: "Northern Ireland"
+    },
+    {
+      value: "scotland",
+      text: "Scotland"
+    },
+    {
+      value: "wales",
+      text: "Wales"
+    }
+  ]
+}) }}
+
+  <button class="govuk-button" data-module="govuk-button">Continue</button>
+</form>
+
+    </div>
+  </div>
+
+{% endblock %}
