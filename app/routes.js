@@ -55,7 +55,7 @@ router.post('/commitment-redirect', function (req, res) {
   // Check whether the variable matches a condition
   if (commitmentRedirect == "yes"){
     // Send user to register page
-    res.redirect('which-country')
+    res.redirect('now-we-need-your-information')
   } 
   else {
     // Stays on challenges page
