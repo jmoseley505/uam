@@ -1,0 +1,56 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Now we need your information
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+<div>
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+</div>
+{% endblock %}
+
+{% block content %}
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">You have entered an address that is not in England or Northern Ireland</h1>
+      <p>To use this service, the accommodation you’re offering must be in England or Northern Ireland. If you have entered the wrong address, click ‘Back’ and enter the correct address.</p>
+      <h2 class="govuk-heading-m">Is the accommodation in Scotland or Wales?</h2>
+      <p>If the accommodation you’re offering is in Scotland or Wales, you must complete the registration form for that country.</p>
+      
+      <p><a href="">Register your interest in Scotland</a></p>
+      <p><a href="">Register your interest in Wales</a></p>
+      
+      <p>If the property you’re offering is outside of the UK, you cannot register for the Homes for Ukraine Scheme.</p>
+
+     
+      <br/>
+
+      <form class="form" action="different-address">
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
+
+
+<!-- <p>We will now ask you for some detailed, personal information to help you find a suitable guest. </p>
+      
+    
+      <p>This information will be sent to your local council and their charitable partners who are actively 
+        looking for hosts for Ukrainian's living in the UK who need a new host.</p> -->
