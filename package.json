@@ -1,5 +1,6 @@
 {
   "name": "govuk-prototype-kit",
+  "homepage": "https://proto-gf8h.onrender.com/",
   "description": "Rapidly create HTML prototypes of GOV.UK services",
   "version": "12.2.0",
   "private": true,
