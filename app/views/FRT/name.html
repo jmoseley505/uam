@@ -1,0 +1,138 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Check if your property is suitable for hosting
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+<div>
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+</div>
+{% endblock %}
+
+{% block content %}
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">
+        Tell us about your issue
+      </h1>
+
+      <p>Here’s a list of things for you to consider about the property you’re offering, before you commit to hosting people from Ukraine.</p>
+
+      <p>Ask yourself if your property has:</p>
+    
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>enough space to live comfortably</li>
+        <li>easy access to affordable public transport</li>
+        <li>shops and restaurants nearby</li>
+        <li>employment opportunities in the area</li>
+        <li>schools and education facilities nearby</li>
+        <li>opportunities to socialise in the area</li>
+      </ul>
+      
+      <!-- <p><a href="https://www.gov.uk/guidance/homes-for-ukraine-sponsor-guidance" class="govuk-link" rel="noreferrer noopener" target="_blank">Read the guidance for sponsors (opens in a new tab)</a> to learn more about suitable accommodation.</p> -->
+     
+      <br/>
+      
+      <form class="form" action="/suitability-redirect" method="post">
+      
+      {% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+
+
+
+{{ govukRadios({
+  idPrefix: "suitability-redirect-1",
+  name: "suitability-redirect-1",
+  fieldset: {
+    legend: {
+      text: "Do you think your home is suitable?",
+      isPageHeading: true,
+      classes: "govuk-fieldset__legend--m"
+    }
+  },
+  hint: {
+    text: "Your property doesn’t have to meet every requirement, but the more it has, the better your chances of becoming a host."
+  },
+  items: [
+    {
+      value: "yes",
+      text: "Yes",
+      hint: {
+        text: "I think my home is suitable"
+      }
+    },
+    {
+      value: "no",
+      text: "No",
+      hint: {
+        text: "My home is not suitable for hosting"
+      }
+    }
+  ]
+}) }}
+
+
+<br />
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
+
+{% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
+
+{{ govukInsetText({
+  html: '<p><a href="https://www.gov.uk/guidance/homes-for-ukraine-sponsor-guidance" class="govuk-link" rel="noreferrer noopener" target="_blank">Learn more about suitable accomodation for hosting <br />(opens in a new tab)</a></p>'
+}) }}
+
+{#
+{{ govukRadios({
+  idPrefix: "suitability-redirect-1",
+  name: "suitability-redirect-1",
+  fieldset: {
+    legend: {
+      text: "Do you think your home is suitable?",
+      isPageHeading: true,
+      classes: "govuk-fieldset__legend--m"
+    },
+    hint: {
+      text: "This includes changing your last name or spelling your name differently."
+    }
+  },
+  items: [
+    {
+      value: "yes",
+      text: "Yes",
+      hint: {
+        text: "I think my home is suitable"
+      }
+    },
+    {
+      value: "no",
+      text: "No",
+      hint: {
+        text: "My home is not suitable for hosting"
+      }
+    }
+  ]
+}) }}
+
+#}

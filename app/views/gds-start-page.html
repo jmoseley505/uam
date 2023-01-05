@@ -1,0 +1,185 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %} Homes for Ukraine: record your interest - GOV.UK
+{% endblock %}
+
+{#
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+{% endblock %}
+#}
+
+{% block beforeContent %}
+{% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
+{{ govukBreadcrumbs({
+  items: [
+    {
+      text: "Home",
+      href: "#"
+    },
+    {
+      text: "Citizenship and living in the UK",
+      href: "#"
+    },
+    {
+      text: "Charities, volunteering and honours",
+      href: "#"
+    }
+  ]
+}) }}
+{% endblock %}
+
+{% block content %}
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      
+
+      <h1 class="govuk-heading-xl">
+        Homes for Ukraine: record your interest
+      </h1>
+
+      <p>
+        If you want to offer a home to people fleeing Ukraine, you can become a sponsor as part of the Homes for Ukraine scheme.
+      </p>
+     <p>
+        Use this service to record your interest in becoming a sponsor. This service is for potential 
+        sponsors who have not yet been matched with a Ukrainian guest.
+      </p>
+      <div class="govuk-inset-text">
+        Find out what you should do if you work for <a href="https://www.gov.uk/guidance/homes-for-ukraine-guidance-for-matching-organisations">an 
+        organisation that wants to match Ukrainian people with sponsors in the UK</a>.
+        </div>
+        <br />
+
+        
+        <h2 class="govuk-heading-m">
+          Who can record their interest
+        </h2>
+      <p>
+        Anyone in the UK who has not been matched with a Ukrainian person or family, as long as:
+      </p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>you can offer a spare room or home for at least 6 months</li>
+        <li>if you’re not a British citizen, you have leave to remain in the UK for at least 6 months</li>
+        <li>you do not have a criminal record</li>
+       </ul> 
+
+       <h2 class="govuk-heading-m">
+        If you already know who you want to sponsor
+      </h2>
+      <p>
+        You do not need to record your interest if you already know who you want to sponsor.
+      </p>
+      <p>
+        You can <a href="https://www.gov.uk/guidance/apply-for-a-visa-under-the-ukraine-sponsorship-scheme">help 
+        them apply for a visa under the Ukraine Sponsorship Scheme</a> instead.
+      </p>
+
+       <h2 class="govuk-heading-m">
+        Sponsoring a child without their parent or legal guardian
+      </h2>
+      <p>
+        Sponsoring a child who is not travelling with, or joining, their parent or legal guardian 
+        in the UK requires a different application process to sponsoring a family.
+      </p>
+      <p>
+        You will need to get written consent from their parent or legal guardian, and get permission 
+        from your local council before you can apply for their visa.
+      </p>
+
+       <h2 class="govuk-heading-m">
+        If you have a family member fleeing Ukraine
+      </h2>
+    <p>
+      You do not need to record your interest as a sponsor if you have a family member fleeing Ukraine. 
+      They should apply for the <a href="https://www.gov.uk/guidance/apply-for-a-ukraine-family-scheme-visa">Ukraine Family Scheme visa</a> instead.
+    </p>
+
+    
+    <p>
+      <a href="https://apply-to-offer-homes-for-ukraine.service.gov.uk/sponsor-a-child">Apply to provide a safe home for a child from Ukraine</a><br/>
+    </p>
+
+    <h2 class="govuk-heading-m">
+      Record your interest (houses in England or Northern Ireland)
+    </h2>
+
+   
+      <a href="is-your-property-suitable" role="button" draggable="false" class="govuk-button govuk-button--start govuk-!-margin-top-2 govuk-!-margin-bottom-8"  data-module="govuk-button">
+        Start now
+        <svg class="govuk-button__start-icon" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19" viewBox="0 0 33 40" aria-hidden="true" focusable="false">
+          <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z"></path>
+        </svg>
+      </a>
+
+      
+      <h2 class="govuk-heading-m">
+        Record your interest (houses in Scotland or Wales)
+      </h2>
+
+      <p>
+        Complete the registration form to:
+      </p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li><a href="https://www.mygov.scot/homes-for-ukraine-scotland-super-sponsor-scheme">record your interest in Scotland</a></li>
+        <li><a href="https://gov.wales/offer-home-wales-refugees-ukraine">record your interest in Wales</a></li>
+       </ul> 
+
+      <h2 class="govuk-heading-m">
+        What happens next
+      </h2>
+
+      <p>
+        Your details will be shared with your local council who may contact you if someone in your area needs a sponsor.
+      </p>
+      <p>
+        Contact one of the following organisations to be matched with a Ukrainian person more quickly:
+      </p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li><a href="https://www.uspuk.org">Citizens UK</a> (via USPUK)</li>
+        <li><a href="https://www.refugeesathome.org">Refugees at Home</a></li>
+        <li><a href="https://resetuk.org/about/ukraine">Reset</a></li>
+        <li><a href="https://www.worldjewishrelief.org/ukraine-faqs">World Jewish Relief</a></li>
+        <li><a href="https://www.lovebristol.org/ukraine-project">Love Bristol</a></li>
+       </ul> 
+
+      <p>
+        You can read more <a href="https://www.gov.uk/guidance/homes-for-ukraine-sponsor-guidance">about being a sponsor, 
+        including responsibilities, checks, and how you can support your guests</a>.
+      </p>
+
+
+      <h2 class="govuk-heading-s">
+        Withdrawing your interest
+      </h2>
+      <p>
+        If you want to withdraw your interest, you do not need to do anything now. You can tell your local council or 
+        chosen organisation that you want to withdraw when they contact you.
+      </p>
+      
+      <br />
+      <hr />
+      <br />
+
+      <h2 class="govuk-heading-m">If you need more information
+      </h2>
+      <p>You can also read the <a href="https://www.gov.uk/guidance/homes-for-ukraine-sponsor-guidance" class="govuk-link" rel="noreferrer noopener" target="_blank">guidance for sponsors (opens in a new tab)</a>, which contains 
+        all the government's information for sponsors and hosts.
+      </p>
+
+    </div>
+  </div>
+
+{% endblock %}
